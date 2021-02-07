@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자 맞추기 게임</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="margin: 0">
+    <h1
+      style="margin: 0; height: 100px; background-color: antiquewhite"
+      align="center"
+    >
+      숫자를 맞춰봐용^~^
+    </h1>
+    <br />
+    이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. 숫자는 1부터 100사이에
+    있습니다<br /><br>
+
+    숫자 :
+    <input type="text" id="number" />
+    <input type="button" value="확인" id="check" onclick="btClick();" class="bt"/>
+    추측횟수 :
+    <input type="text" id="count" value="0" />
+    힌트 :
+    <input type="text" id="hint" />
+    <script>
+      var num = Math.floor(Math.random() * 100) + 1;
+      function btClick() {
+        if (parseInt(document.getElementById("number").value) > num + 10) {
+          document.getElementById("hint").value = "많이 높습니다.";
+        } else if (parseInt(document.getElementById("number").value) > num) {
+          document.getElementById("hint").value = "높습니다.";
+        } else if (
+          parseInt(document.getElementById("number").value) <
+          num - 10
+        ) {
+          document.getElementById("hint").value = "많이 낮습니다.";
+        } else if (parseInt(document.getElementById("number").value) < num) {
+          document.getElementById("hint").value = "낮습니다.";
+        } else if (parseInt(document.getElementById("number").value) == num) {
+            alert("정답입니다. (확인 누를 시 regame~!)");
+            history.go(0);
+          
+        }
+
+        document.getElementById("count").value =
+          parseInt(document.getElementById("count").value) + 1;
+      }
+    </script>
+  </body>
+</html>

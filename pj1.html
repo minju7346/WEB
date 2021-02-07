@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구구단</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body style="margin:0">
+    <h1  style="margin:0; height:100px; background-color: antiquewhite;" align="center">구구단^~^</h1>
+    <br /><br>
+    <table  border="1" bordercolor="wheat" width="500" heght="200" align ="center" bgcolor="antiquewhite">
+    <script>
+        var nn = prompt("구구단 몇 단을 출력할까요?","1~9");
+        n = parseInt(nn);
+        document.write("<h1>"+n+"단 출력~!"+"</h1>"); 
+            for(i = 1; i <= 9; i++)
+            {
+                document.write("<tr>");
+                document.write("<td>"+n+"</td>");
+                document.write("<td>"+i+"</td>");
+                document.write("<td>"+i*n+"</td>");
+                document.write("</tr>");
+            }
+         
+    </script>
+    </table>
+  </body>
+</html>

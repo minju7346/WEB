@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>크리스마스까지 남은 시간은?</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="margin: 0">
+    <h1
+      style="margin: 0; height: 100px; background-color: antiquewhite"
+      align="center"
+    >
+      추첨을 해보아요^~^
+    </h1>
+    <script>
+      var current = new Date();
+      var chris = new Date(2020, 11, 25, 0, 0, 0);
+      if (current.getMinutes() % 2 == 0)
+        document.body.style.backgroundColor = "violet";
+      else document.body.style.backgroundColor = "lightskyblue";
+      document.write(
+        "크리스마스까지 " +
+          Math.floor(
+            (chris.getTime() - current.getTime()) / (1000 * 60 * 60 * 24)
+          ) +
+          "일 " +
+          (24 - current.getHours()) +
+          "시간 " +
+          (60 - current.getMinutes()) +
+          "분 " +
+          (60
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+           - current.getSeconds()) +
+          "초 남았습니다."
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>랜덤 추첨 게임</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="margin: 0">
+    <h1
+      style="margin: 0; height: 100px; background-color: antiquewhite"
+      align="center"
+    >
+      추첨을 해보아요^~^
+    </h1>
+    <br />
+    1. 뽑을 사람 수를 입력하시오:
+    <input type="text" id="number1" />
+    <br /><br />
+    2. 이름 배열 입력 후 추가버튼 누르기~(형식은 쉼표로 구분 / ex -> 김,이,박) :
+    <input type="text" id="member" />
+    <input type="button" id="bt2" value="추가" class="bt" onclick="h1();" />
+    <br /><br />
+    당첨자 : <br />
+    ​<textarea
+      onkeyup="xSize(this)"
+      style="width: 300px; height: 36px; overflow-y: hidden"
+      id="list"
+    ></textarea>
+    <script>
+      function xSize(e) {
+        e.style.height = "1px";
+        e.style.height = e.scrollHeight + 12 + "px";
+      }
+      function h1() {
+        var i = 0;
+        var n;
+        var a1 = parseInt(document.getElementById("number1").value);
+        var arrstr = document.getElementById("member").value;
+        var arr2 = arrstr.split(",");
+        var j = 1;
+        for (i = 0; i < a1; i++) {
+          n = Math.floor(Math.random() * (arr2.length - j-1));
+          document.getElementById("list").value += arr2.splice(n,1);
+          document.getElementById("list").value += "  ";
+          j++;
+        }
+      }
+    </script>
+  </body>
+</html>

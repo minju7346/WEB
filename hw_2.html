@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>document.getElementsByTagName()</title>
+    <script>
+      function change() {
+        var spanArray = document.getElementsByTagName("span");
+
+        var a = document.getElementsByTagName("h3"); 
+        
+
+		// for (var i = 0; i < a.length; i++) {
+        //   var arr = a[i];
+        //   arr.style.color = "orchid";
+        //   arr.style.fontSize = "20px";
+		// }
+        for (var i = 0; i < spanArray.length; i++) {
+          var span = spanArray[i];
+          span.style.color = "orchid";
+          span.style.fontSize = "20px";
+        }
+        // alert(spanArray.length+1);
+		a.style.color="red";
+        a.style.fontSize = "20px";
+      }
+    </script>
+  </head>
+  <body>
+    <h3 >
+      가사 숫자 바꾸기
+      <button onclick="change()">누르세요</button>
+    </h3>
+    <hr />
+    <span>1</span>절의 그 별이 <span>2</span>절의 그 별이 그래 모두 나였지
+    실화가 된 동화이지 힘들 때면 홀로 쓴 노래를 불러 환상들을 보던 성냥팔이
+    소년이였던 나날들이<span>365</span>, <span>24</span>, <span>730</span>,
+    <span>24</span>에 <span>71095</span> 아 그만 세자 <span>1400</span>이 되니
+    oh
+  </body>
+</html>

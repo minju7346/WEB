@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사칙연산</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body style="margin: 0">
+    <h1 style="margin: 0; height: 100px; background-color: antiquewhite">
+      사칙연산^~^
+    </h1>
+    <br /><br />
+    <script>
+      var a1 = parseInt(prompt("첫번째 숫자를 입력하세요", "0"));
+      var c = prompt("연산자를 입력하세요", "+, -, *, /");
+      var a2 = parseInt(prompt("두번째 숫자를 입력하세요", "0"));
+      switch (c) {
+        case "+":
+          document.write("<h1>" + a1 + c + a2 + "=" + (a1+a2) + "</h1>");
+          break;
+        case "-":
+          document.write("<h1>" + a1 + c + a2 + "=" + (a1-a2)+ "</h1>");
+          break;
+        case "*":
+          document.write("<h1>" + a1 + c + a2 + "=" + (a1*a2) + "</h1>");
+          break;
+        case "/":
+          document.write("<h1>" + a1 + c + a2 + "=" + (a1/a2) + "</h1>");
+          break;
+      }
+     
+    </script>
+  </body>
+</html>
